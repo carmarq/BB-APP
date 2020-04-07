@@ -22,6 +22,12 @@ html {
 }
 
 
+.logobb{
+  height: 130px;
+  width: 170px;
+
+}
+
 .title-body {
   height: 75vh;
 }
@@ -29,4 +35,15 @@ html {
 .menu-pic {
   height: 50vh;
   width: 40vw;
+}
+
+.navbar {
+  margin-top: -10px;
+  background-color: #F40102;
+  text-align: center;
+}
+
+.menubutton {
+  padding-left: 23vw;
+  font-size: 2.5vh;
 }

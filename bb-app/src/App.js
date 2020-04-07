@@ -12,9 +12,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Navbar />
-      <Title />  
-       
+      <Navbar />  
+       <Title />
       </header>
     </div>
   );
