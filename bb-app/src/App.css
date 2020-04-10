@@ -33,8 +33,16 @@ html {
 }
 
 .menu-pic {
-  height: 50vh;
-  width: 40vw;
+  height: 75vh;
+  width: 50vw;
+}
+
+.title-header {
+  padding: 4vh;
+}
+
+.title-text {
+  padding: 4vh;
 }
 
 .navbar {

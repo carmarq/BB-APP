@@ -1,11 +1,11 @@
-import React from "react";   //functioning react component ?? ill verify
+import React from "react";  
 
-
-function Navbar() {
+function Footer() {
     return(
- 
+
+
 
     )
 }
 
-export default Navbar;
+export default Footer;

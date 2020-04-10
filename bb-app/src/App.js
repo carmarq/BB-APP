@@ -7,6 +7,8 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Title from './components/Title';
+import Combo from'./components/combos';
+
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
       <header className="App-header">
       <Navbar />  
        <Title />
+       <Combo />
+
+      
       </header>
     </div>
   );
