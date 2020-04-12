@@ -1,5 +1,6 @@
 import React from "react";   //functioning react component ?? ill verify
 import logo from '../bblogo.png'; // Tell webpack this JS file uses this image
+import AboutUs from '../AboutUs';
 
 
 function Navbar() {
@@ -17,11 +18,11 @@ function Navbar() {
              </li>
             
              <li class="nav-item">
-                <a class="nav-link " href="#">About Us</a>
+                <a class="nav-link " href={ AboutUs }>About Us</a>
              </li>
 
              <li class="nav-item">
-                <a class="nav-link " href="#">Order on DoorDash</a>
+                <a class="nav-link " href="https://www.doordash.com/store/bob-s-burgers-albuquerque-769726/en-US">Order on DoorDash</a>
              </li>
 
             <li class="nav-item">
