@@ -82,5 +82,3 @@ function Combo() {
 
     )
 }
-
-export default Combo;

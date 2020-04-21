@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  text-decoration: none;
 }
 
 * {
@@ -12,7 +13,7 @@
 
 html {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Sen', sans-serif;
 }
 
 @media screen and (max-width: 500px) {
@@ -20,7 +21,6 @@ html {
     font-size: 10px;
   }
 }
-
 
 .logobb{
   height: 130px;
@@ -32,10 +32,6 @@ html {
   height: 75vh;
 }
 
-.menu-pic {
-  height: 75vh;
-  width: 50vw;
-}
 
 .title-header {
   padding: 4vh;
@@ -46,12 +42,140 @@ html {
 }
 
 .navbar {
-  margin-top: -10px;
   background-color: #F40102;
-  text-align: center;
+  
+  text-decoration: none;
+}
+
+.navbar-header {
+width: 100%;
+   width: 100vw;
 }
 
 .menubutton {
   padding-left: 23vw;
   font-size: 2.5vh;
+}
+
+
+.navbar-list {
+  background-color: #F40102;
+  text-decoration: none;
+  text-decoration-color: #F40102;
+  color: #F40102;
+}
+
+
+.homeList, .aboutList {
+   width: 50vw;
+}
+
+.homeLink, .aboutLink{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+}
+.navLogo {
+  align-content: center;
+    width: 193px;
+    height: 145px;
+    position: absolute;
+    left: 5vw;
+
+}
+
+
+
+.comboList {
+  color: white;
+  font-family: 'Sen', sans-serif;
+
+}
+
+.hamburgerList {
+text-decoration: none;
+}
+
+.alacarteList {
+text-decoration: none;
+}
+
+.hotdogList {
+text-decoration: none;
+}
+
+.breakfastList {
+text-decoration: none;
+}
+
+.dessertList {
+text-decoration: none;
+}
+
+
+.drinkList {
+  text-decoration: none;
+}
+
+.categories {
+  text-decoration: none;
+}
+
+
+.hamburgerLink {
+  text-decoration: none;
+}
+
+ul li::marker {
+  text-decoration: none;
+}
+
+.about-text {
+
+}
+
+.about-body {
+}
+
+p {
+  width: 50%;
+
+}
+
+/*Desktops and Laptops*/
+@media only screen and (min-width:1224px){
+   .menu-pic {
+  height: 400px;
+  width: 500px;
+}
+
+}
+
+/*Smartphones*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+ .menu-pic {
+  height: 250px;
+  width: 300px;
+}
+
+.logobb{
+  height: 100px;
+  width: 125px;
+}
+
+.navLogo {
+  align-content: center;
+  position: relative;
+right: 35vw; top: 2vw;
+width: 100px;
+height: 75px;
+}
+
+.homeLink, .aboutLink{
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
 }

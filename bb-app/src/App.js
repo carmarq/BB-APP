@@ -5,19 +5,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import Title from './components/Title';
-import Combo from'./components/combos';
-import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Navbar />  
-       <Title />
-       <Combo />
+      <Navbar />
 
-       <Footer />
       </header>
     </div>
   );

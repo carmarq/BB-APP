@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
-import logo from '../bblogo.png'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import burger from '../burgerhand.png'; 
-
-
+import React from "react";   //functioning react component ?? ill verify
+import logo from '../bblogo.png'; // Tell webpack this JS file uses this image
+import burger from '../burgerhand.png'; // Tell webpack this JS file uses this image
+import "bootstrap/dist/css/bootstrap.css";
 
 import {
   BrowserRouter as Router,
@@ -15,146 +12,60 @@ import {
 
 
 
-
-export default function Navbar() {
-  return (
-    <Router>
-    <nav className="navbar">
-      <header className="navbar-header ">
-        <img src={logo} className="navLogo " alt="Logo" />
-        <ul className="navbar-list">
-          <li className="nav-item active homepageList">
-            <Link to="/Homepage" className="nav-link homeLink">Menu</Link>
-          </li>
-          <li className="nav-item aboutusList">
-            <Link to="/About" className="nav-link aboutLink">About Us</Link>
-          </li>
-        </ul>
-
-        <hr />
-        
-            <Switch>
-          <Route path="/About">
-            <About />
-          </Route>   
-
-               <Route exact path="/Homepage">
-            <Homepage />
-          </Route>   
-
-          <Route exact path="/">
-            <Homepage />
-          </Route>    
-
-
-      
-        </Switch>
-      </header>
-    </nav>
-    </Router>
-    );
-}
-
-
-
-const Homepage = () => (
+export default function Homepage = () => (
   <section>
-    <section className="homeCard">
-      <div className="col-md-12">
-        <div className="card">
-          <div className="card-body">
-            <img src={burger} className="menu-pic" alt="Picture of Menu" />
-            <h5 className="title-header">Ranchero Burger. Try it today!</h5>
-            <a class="btn btn-danger" href="https://www.doordash.com/store/bob-s-burgers-albuquerque-769726/en-US" role="button">Order on DoorDash</a>
-          </div>
- <div>
-  <Router>
-      <div>
-        <ul className="list-group list-group-flush">
-         <li className="comboList">
-          <Link to="/Combo" className="list-group-item list-group-item-action comboLink">Combos</Link>
-        </li>
-        <li className="hamburgerList">
-          <Link to="/Hamburger" className="list-group-item list-group-item-action hamburgerLink">Hamburgers</Link>
-        </li>
-        <li className="alacarteList">
-          <Link to="/Alacarte" className="list-group-item list-group-item-action alacarteLink">Ala Carte</Link>
-        </li>
-        <li className="hotdogList">
-          <Link to="/Hotdog" className="list-group-item list-group-item-action hotdogLink">Hotdogs and Fabulous Fries</Link>
-        </li>
-        <li className="breakfastList">
-          <Link to="/Breakfast" className="list-group-item list-group-item-action breakfastLink">Breakfast</Link>
-        </li>
-        <li className="dessertList">
-          <Link to="/Dessert" className="list-group-item list-group-item-action dessertLink">Desserts</Link>
-        </li>
-        <li className="drinkList">
-          <Link to="/Drink" className="list-group-item list-group-item-action drinkLink">Drinks</Link>
-        </li>
-        </ul>
-
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
-        <Switch>
-
-          <Route exact path="/Combo">
-            <Combo />
-          </Route>
-
-          <Route path="/Hamburger">
-            <Hamburger />
-          </Route>
-
-           <Route path="/Alacarte">
-            <Alacarte />
-          </Route>
-
-          <Route path="/Hotdog">
-            <Hotdog />
-          </Route>
-
-           <Route path="/Breakfast">
-            <Breakfast />
-          </Route>
-
-          <Route path="/Dessert">
-            <Dessert />
-          </Route>
-
-           <Route path="/Drink">
-            <Drink />
-          </Route>
-
-          <Route path="/">
-          <Combo />
-          </Route>
-          
-        </Switch>
-      </div>
-    </Router>
-
-
-          </div>
+  <section>
+    <div className="col-md-12">
+      <div className="card">
+        <div className="card-body">
+         <img src={burger} className="menu-pic" alt="Picture of Menu" />
+         <h5 className="title-header">Card title</h5>
+         <p className="title-text">Some text to build on the card's content.</p>
         </div>
-      </div>  
-     </section>  
+      </div>
+    </div>  
   </section>
+
+<section>
+<Router>
+  <div>
+    <ul>
+<li>
+  <Link to="Combo">Combo</Link>
+</li>
+<li>
+  <Link to="Hamburger">Hamburger</Link>
+</li>
+<li>
+  <Link to="Alacarte">Ala Carte</Link>
+</li>
+<li>
+  <Link to="Hotdog">Hotdogs and Fabulous Fries</Link>
+</li>
+<li>
+  <Link to="Breakfast">Breakfast</Link>
+</li>
+<li>
+  <Link to="Dessert">Desserts</Link>
+</li>
+<li>
+  <Link to="Drinks">Drinks</Link>
+</li>
+    </ul>
+  </div>
+</Router>
+</section>
+</section>
+
     );
 
+export default Homepage;
 
 
-function Combo() {
+const Combo() {
   return (
     <section>
-    <h2>Combos!</h2>
+    <h2>Combos</h2>
     <div className="col-md-4">
                <div className="card">
                   <div className="card-body">
@@ -312,7 +223,7 @@ function Hamburger() {
 function Breakfast() {
     return(
   <section>
-   <h2>Breakfast</h2>
+      <h2>Breakfast</h2>
     <div class="row text-center">
       <div class="col-md-4">
             <div class="card">
@@ -474,7 +385,7 @@ function Breakfast() {
              </div>
           </div>
           </div>
-  </section>
+</section>
     );
 }
 
@@ -561,7 +472,7 @@ function Alacarte() {
 function Hotdog() {
     return(
     <section>
-        <h2>Hotdog</h2>
+        <h2>Combos</h2>
         <div className="col-md-4">
                    <div className="card">
                       <div className="card-body">
@@ -640,7 +551,7 @@ function Hotdog() {
 function Dessert() {
     return(
          <section>
-          <h2>Desserts</h2>
+          <h2>Dessert</h2>
           <div className="col-md-4">
                      <div className="card">
                         <div className="card-body">
@@ -778,39 +689,3 @@ function Drink() {
         </section>
     );
 }
-
-
-function About() {
-  return (
-    <section className="homeCard">
-        <div className="col-md-12">
-            <div className="card">
-                <div className="card-body about-body">
-                  <h1 className="about-us-title">About Us</h1>
-                  <img src={burger} className="menu-pic" alt="Picture of Menu" />
-                  <h5 className="title-header">Mission Statement</h5>
-                  <p className="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero nisl, fermentum eu suscipit eget, ornare maximus metus. Donec vulputate sit amet leo sed semper. Phasellus nec lacus commodo, eleifend tortor vel, tempor turpis. Etiam in metus posuere, iaculis tellus id, fermentum massa. In mauris diam, condimentum non rhoncus in, ornare molestie est. Donec tempor rutrum dolor at efficitur. Donec et eros tempus sapien congue pellentesque et eget dolor. In id lectus sit amet lacus dapibus porta interdum pharetra augue. Vivamus pharetra magna et lectus molestie, sed consequat nulla cursus. Duis auctor tincidunt diam sit amet fringilla. Fusce a felis molestie sem consequat elementum sed nec metus.
-                  </p>
-                  <br/>
-                  <p>  
-                    Aenean eget ante quam. Maecenas ac tincidunt enim, in pretium nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque gravida semper lectus, vitae vulputate ex mollis tincidunt. In dignissim efficitur finibus. Vivamus tempus, nulla sed ornare luctus, lorem urna varius metus, ut semper dolor mauris a metus. Vestibulum et orci a sem congue euismod. In tincidunt facilisis nisi sit amet accumsan. In lobortis nisi quis placerat tempor. Donec accumsan nisl id ex efficitur cursus sit amet ut velit. Integer faucibus sem sit amet orci sagittis, et luctus metus cursus. Mauris fermentum quis erat quis dictum. Fusce vel ipsum vel purus porttitor sodales non quis quam.
-                  </p>
-                  <br/>
-                  <p>
-                    Sed laoreet aliquet ipsum, sed commodo nulla volutpat in. Integer consequat nibh ante, non rhoncus tellus fermentum a. Aenean a augue ipsum. Vestibulum convallis ligula vitae nibh lacinia, nec congue lacus dignissim.
-                  </p>
-                </div>
-                </div>
-          </div>  
-      </section> 
-  );
-}
-
-
-
-
-
-
-
-
