@@ -131,16 +131,17 @@ ul li::marker {
   text-decoration: none;
 }
 
-.about-text {
-
+.homeLink {
+  position: relative;
+  right: 6vw;
+  top: 5vh;
+  
 }
 
-.about-body {
-}
-
-p {
-  width: 50%;
-
+.aboutLink {
+  position: relative;
+  left: 4vw;
+  bottom: 3.4vh;
 }
 
 /*Desktops and Laptops*/
