@@ -10,6 +10,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  NavLink,
   Link
 } from "react-router-dom";
 
@@ -18,41 +19,40 @@ import {
 
 export default function Navbar() {
   return (
+
     <Router>
-    <nav className="navbar">
-      <header className="navbar-header ">
+      <header className="navbar-header">
         <img src={logo} className="navLogo " alt="Logo" />
-        <ul className="navbar-list">
-          <li className="nav-item active homepageList">
-            <Link to="/Homepage" className="nav-link homeLink">Menu</Link>
-          </li>
-          <li className="nav-item aboutusList">
-            <Link to="/About" className="nav-link aboutLink">About Us</Link>
-          </li>
-        </ul>
+          <nav className='bb-nav'>
+            <ul className="navbar-list">
+              <li className="nav-item active homepageList">
+                <NavLink to="/Homepage" className="nav-link homeLink">Menu</NavLink>
+              </li>
+              <li className="nav-item aboutusList">
+                <NavLink to="/About" className="nav-link aboutLink">About Us</NavLink>
+              </li>
+            </ul>
 
         <hr />
         
             <Switch>
-          <Route path="/About">
-            <About />
-          </Route>   
+              <Route path="/About">
+                <About />
+              </Route>   
 
-               <Route exact path="/Homepage">
-            <Homepage />
-          </Route>   
+              <Route exact path="/Homepage">
+                <Homepage />
+              </Route>   
 
-          <Route exact path="/">
-            <Homepage />
-          </Route>    
+              <Route exact path="/">
+                <Homepage />
+              </Route>     
+            </Switch>
 
-
-      
-        </Switch>
+          </nav>
       </header>
-    </nav>
     </Router>
-    );
+          );
 }
 
 
@@ -60,10 +60,9 @@ export default function Navbar() {
 const Homepage = () => (
   <section>
     <section className="homeCard">
-      <div className="col-md-12">
+      <div className="col-md-12 home-outer">
         <div className="card">
-          <div className="card-body">
-            <img src={burger} className="menu-pic" alt="Picture of Menu" />
+          <div className="card-body home-body">
             <h5 className="title-header">Ranchero Burger. Try it today!</h5>
             <a class="btn btn-danger" href="https://www.doordash.com/store/bob-s-burgers-albuquerque-769726/en-US" role="button">Order on DoorDash</a>
           </div>
@@ -154,7 +153,7 @@ const Homepage = () => (
 function Combo() {
   return (
     <section>
-    <h2>Combos!</h2>
+    <h2>Combos</h2>
     <div className="col-md-4">
                <div className="card">
                   <div className="card-body">
@@ -238,10 +237,9 @@ function Hamburger() {
                      <div className="card">
                         <div className="card-body">
                         <img src={logo} className="logobb" alt="Logo" />
-                           <h5 className="card-title">Combo A</h5>
-                           <p className="card-text">Ranchero Supreme Burger</p>
-                           <p className="card-text">Fries, Drink.</p>
-                           <p className="card-text">$5.10</p>
+                           <h5 className="card-title">Ranchero Supreme Burger</h5>
+                           <p className="card-text">Green chile, cheese, lettuce, tomato.</p>
+                           <p className="card-text">$3.65</p>
                         </div>
                      </div>
                   </div>
@@ -250,10 +248,9 @@ function Hamburger() {
                      <div className="card">
                         <div className="card-body">
                         <img src={logo} className="logobb" alt="Logo" />
-                           <h5 className="card-title">Combo B</h5>
-                           <p className="card-text">Old Fashioned Burger</p>
-                           <p className="card-text">Fries, Drink.</p>
-                           <p className="card-text">$4.75</p>
+                           <h5 className="card-title">Ranchro Burger</h5>
+                           <p className="card-text">Green chile only.</p>
+                           <p className="card-text">$2.99</p>
                         </div>
                      </div>
                   </div>
@@ -262,10 +259,9 @@ function Hamburger() {
                      <div className="card">
                         <div className="card-body">
                         <img src={logo} className="logobb" alt="Logo" />
-                           <h5 className="card-title">Combo C</h5>
-                           <p className="card-text">Chili Dog</p>
-                           <p className="card-text">Fries, Drink.</p>
-                           <p className="card-text">$4.75</p>
+                           <h5 className="card-title">Old Fashioned Burger</h5>
+                           <p className="card-text">Mustard, pickle, onion, lettuce, tomato.</p>
+                           <p className="card-text">$2.99</p>
                         </div>
                      </div>
                   </div>
@@ -274,9 +270,7 @@ function Hamburger() {
                      <div className="card">
                         <div className="card-body">
                         <img src={logo} className="logobb" alt="Logo" />
-                           <h5 className="card-title">Combo D</h5>
-                           <p className="card-text">2 Taco Burgers</p>
-                           <p className="card-text">Fries, Drink.</p>
+                           <h5 className="card-title">Red Chile Only Burger</h5>
                            <p className="card-text">$6.85</p>
                         </div>
                      </div>
@@ -286,10 +280,9 @@ function Hamburger() {
                      <div className="card">
                         <div className="card-body">
                         <img src={logo} className="logobb" alt="Logo" />
-                           <h5 className="card-title">Combo E</h5>
-                           <p className="card-text">Corn Dog</p>
-                           <p className="card-text">Fries, Drink.</p>
-                           <p className="card-text">$7.05</p>
+                           <h5 className="card-title">Bobs Double Bacon Burger</h5>
+                           <p className="card-text">Bacon, mustard, pickle, onion, lettuce, tomato.</p>
+                           <p className="card-text">$4.29</p>
                         </div>
                      </div>
                   </div>
@@ -298,10 +291,8 @@ function Hamburger() {
                      <div className="card">
                         <div className="card-body">
                         <img src={logo} className="logobb" alt="Logo" />
-                           <h5 className="card-title">Combo F</h5>
-                           <p className="card-text">Chicken Nuggets</p>
-                           <p className="card-text">Fries, Drink.</p>
-                           <p className="card-text">$4.60</p>
+                           <h5 className="card-title">Patty Melt Burger</h5>
+                           <p className="card-text">$5.09</p>
                         </div>
                      </div>
                     </div>
@@ -486,10 +477,8 @@ function Alacarte() {
                    <div className="card">
                       <div className="card-body">
                       <img src={logo} className="logobb" alt="Logo" />
-                         <h5 className="card-title">Combo A</h5>
-                         <p className="card-text">Ranchero Supreme Burger</p>
-                         <p className="card-text">Fries, Drink.</p>
-                         <p className="card-text">$5.10</p>
+                         <h5 className="card-title">Taco Burger</h5>
+                         <p className="card-text">$2.55</p>
                       </div>
                    </div>
                 </div>
@@ -498,10 +487,8 @@ function Alacarte() {
                    <div className="card">
                       <div className="card-body">
                       <img src={logo} className="logobb" alt="Logo" />
-                         <h5 className="card-title">Combo B</h5>
-                         <p className="card-text">Old Fashioned Burger</p>
-                         <p className="card-text">Fries, Drink.</p>
-                         <p className="card-text">$4.75</p>
+                         <h5 className="card-title">Tortilla Burger</h5>
+                         <p className="card-text">$2.79</p>
                       </div>
                    </div>
                 </div>
@@ -510,10 +497,8 @@ function Alacarte() {
                    <div className="card">
                       <div className="card-body">
                       <img src={logo} className="logobb" alt="Logo" />
-                         <h5 className="card-title">Combo C</h5>
-                         <p className="card-text">Chili Dog</p>
-                         <p className="card-text">Fries, Drink.</p>
-                         <p className="card-text">$4.75</p>
+                         <h5 className="card-title">3 Beef Taquitos</h5>
+                         <p className="card-text">$3.35</p>
                       </div>
                    </div>
                 </div>
@@ -522,10 +507,8 @@ function Alacarte() {
                    <div className="card">
                       <div className="card-body">
                       <img src={logo} className="logobb" alt="Logo" />
-                         <h5 className="card-title">Combo D</h5>
-                         <p className="card-text">2 Taco Burgers</p>
-                         <p className="card-text">Fries, Drink.</p>
-                         <p className="card-text">$6.85</p>
+                         <p className="card-text">Beef Taquito Boat</p>
+                         <p className="card-text">$4.25</p>
                       </div>
                    </div>
                 </div>
@@ -534,10 +517,68 @@ function Alacarte() {
                    <div className="card">
                       <div className="card-body">
                       <img src={logo} className="logobb" alt="Logo" />
-                         <h5 className="card-title">Combo E</h5>
-                         <p className="card-text">Corn Dog</p>
-                         <p className="card-text">Fries, Drink.</p>
-                         <p className="card-text">$7.05</p>
+                         <h5 className="card-title">Beef Taquito Dozen</h5>
+                         <p className="card-text">$11.89</p>
+                      </div>
+                   </div>
+                </div>
+
+                 <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">3 Chicken Taquitos</h5>
+                         <p className="card-text">$3.65</p>
+                      </div>
+                   </div>
+                  </div>
+
+                   <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Chicken Taquito Boat</h5>
+                         <p className="card-text">$4.35</p>
+                      </div>
+                   </div>
+                </div>
+
+                 <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Chicken Taquito Dozen</h5>
+                         <p className="card-text">$4.75</p>
+                      </div>
+                   </div>
+                </div>
+
+                 <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Chicken Nuggets</h5>
+                         <p className="card-text">$2.40</p>
+                      </div>
+                   </div>
+                </div>
+
+                <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Quesadilla</h5>
+                         <p className="card-text">$3.59</p>
+                      </div>
+                   </div>
+                </div>
+
+                 <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Chicken Sandwich</h5>
+                         <p className="card-text">$4.99</p>
                       </div>
                    </div>
                 </div>
@@ -547,9 +588,29 @@ function Alacarte() {
                       <div className="card-body">
                       <img src={logo} className="logobb" alt="Logo" />
                          <h5 className="card-title">Combo F</h5>
-                         <p className="card-text">Chicken Nuggets</p>
-                         <p className="card-text">Fries, Drink.</p>
-                         <p className="card-text">$4.60</p>
+                         <p className="card-text">Grilled Cheese Sandwich</p>
+                         <p className="card-text">$2.79</p>
+                      </div>
+                   </div>
+                  </div>
+
+
+                 <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Frito Pie</h5>
+                         <p className="card-text">$2.85</p>
+                      </div>
+                   </div>
+                </div>
+
+                 <div className="col-md-4">
+                   <div className="card">
+                      <div className="card-body">
+                      <img src={logo} className="logobb" alt="Logo" />
+                         <h5 className="card-title">Chips & Salsa</h5>
+                         <p className="card-text">$1.29</p>
                       </div>
                    </div>
                   </div>
@@ -719,63 +780,63 @@ function Dessert() {
 function Drink() {
     return(
         <section>
-          <h2>Drinks</h2>
-          <div class="row text-center">
-          <div class="col-md-6">
-                     <div class="card">
-                        <div class="card-body">
-                        <img src={logo} className="logobb" alt="Logo" />
-                           <h5 class="card-title">Large Drinks</h5>
-                           <p class="card-text">Diet Dr. Pepper,Dr Pepper</p>
-                           <p class="card-text">Diet Pepsi,Pepsi</p>
-                           <p class="card-text">Mug root Beer</p>
-                           <p class="card-text">$2.55</p>
-                        </div>
-                     </div>
+    <h2>Drinks</h2>
+    <h6>Small - $1.95 || Medium - $2.29 || Large - $2.55</h6>
+    <div className="col-md-4">
+               <div className="card">
+                  <div className="card-body">
+                  <img src={logo} className="logobb" alt="Logo" />
+                     <h5 className="card-title">Pepsi</h5>
                   </div>
+               </div>
+            </div>
 
-                   <div class="col-md-6">
-                     <div class="card">
-                        <div class="card-body">
-                        <img src={logo} className="logobb" alt="Logo" />
-                           <h5 class="card-title">Medium Drinks</h5>
-                           <p class="card-text">Diet Dr. Pepper,Dr Pepper</p>
-                           <p class="card-text">Diet Pepsi,Pepsi</p>
-                           <p class="card-text">Mug root Beer</p>
-                           <p class="card-text">$2.29</p>
-                        </div>
-                     </div>
+             <div className="col-md-4">
+               <div className="card">
+                  <div className="card-body">
+                  <img src={logo} className="logobb" alt="Logo" />
+                     <h5 className="card-title">Diet Pepsi</h5>
+                     
                   </div>
-                  </div>
+               </div>
+            </div>
 
-                  <div class="row text-center">
-                   <div class="col-md-6">
-                     <div class="card">
-                        <div class="card-body">
-                        <img src={logo} className="logobb" alt="Logo" />
-                           <h5 class="card-title">Small Drinks</h5>
-                           <p class="card-text">Diet Dr. Pepper,Dr Pepper</p>
-                           <p class="card-text">Diet Pepsi,Pepsi</p>
-                           <p class="card-text">Mug root Beer</p>
-                           <p class="card-text">$1.95</p>
-                        </div>
-                     </div>
+             <div className="col-md-4">
+               <div className="card">
+                  <div className="card-body">
+                  <img src={logo} className="logobb" alt="Logo" />
+                     <h5 className="card-title">Dr. Pepper</h5>
                   </div>
+               </div>
+            </div>
 
-                  <div class="col-md-6">
-                     <div class="card">
-                        <div class="card-body">
-                        <img src={logo} className="logobb" alt="Logo" />
-                           <h5 class="card-title">Apple Bites</h5>
-                           <p class="card-text">Bite-sized pastry with apple.</p>
-                           <p class="card-text">Dozen Apple Bites.</p>
-                            <p class="card-text">Bottled Water.</p>
-                           <p class="card-text">$7.85</p>
-                        </div>
-                     </div>
+            <div className="col-md-4">
+               <div className="card">
+                  <div className="card-body">
+                  <img src={logo} className="logobb" alt="Logo" />
+                     <h5 className="card-title">Diet Dr. Pepper</h5>
                   </div>
+               </div>
+            </div>
+
+             <div className="col-md-4">
+               <div className="card">
+                  <div className="card-body">
+                  <img src={logo} className="logobb" alt="Logo" />
+                     <h5 className="card-title">Mug Root Beer</h5>
                   </div>
-        </section>
+               </div>
+            </div>
+
+             <div className="col-md-4">
+               <div className="card">
+                  <div className="card-body">
+                  <img src={logo} className="logobb" alt="Logo" />
+                     <h5 className="card-title">Bottled Water</h5>
+                  </div>
+               </div>
+              </div>
+    </section>
     );
 }
 

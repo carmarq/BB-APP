@@ -90,36 +90,37 @@ width: 100%;
 .comboList {
   color: white;
   font-family: 'Sen', sans-serif;
+  list-style-type: none;
 
 }
 
 .hamburgerList {
-text-decoration: none;
+list-style-type: none;
 }
 
 .alacarteList {
-text-decoration: none;
+list-style-type: none;
 }
 
 .hotdogList {
-text-decoration: none;
+list-style-type: none;
 }
 
 .breakfastList {
-text-decoration: none;
+list-style-type: none;
 }
 
 .dessertList {
-text-decoration: none;
+list-style-type: none;
 }
 
 
 .drinkList {
-  text-decoration: none;
+list-style-type: none;
 }
 
 .categories {
-  text-decoration: none;
+list-style-type: none;
 }
 
 
